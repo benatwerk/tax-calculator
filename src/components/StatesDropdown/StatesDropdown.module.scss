@@ -1,0 +1,43 @@
+.stateDropdown {
+    $main-color: rgb(129, 178, 154);
+    border: none;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    &.disabled {
+        opacity: 0.5;
+    }
+    label,
+    select {
+        display: flex;
+        align-items: center;
+        height: 1rem;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    label {
+        background-color: rgba(0, 0, 0, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.07);
+        font-size: 0.8rem;
+    }
+    select {
+        flex: 1;
+        box-sizing: content-box;
+        background-color: rgb($main-color, 0.05);
+        border: 1px solid rgb($main-color, 0.3);
+        transition: border-color 0.3s, box-shadow 0.3s;
+        &:hover {
+            border-color: rgb($main-color, 0.5);
+            box-shadow: 0 0 0 0.2rem rgb($main-color, 0.1);
+        }
+        &:focus {
+            border-color: rgb($main-color, 0.8);
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgb($main-color, 0.2);
+        }
+        &:not(:first-child) option:disabled {
+            display: none;
+        }
+    }
+}

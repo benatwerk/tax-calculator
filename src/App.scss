@@ -8,4 +8,8 @@ body {
 .calculator {
     margin: 0 auto;
     width: 500px;
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
 }
